@@ -94,8 +94,6 @@ def main():
             processed_chunks += 1
             if result:
                 found['pw'] = result
-                elapsed = time.time() - start
-                total_passes = processed_chunks * chunk_size
                 print(f"\npassword: {result}")
                 pool.terminate()
                 pool.join()
@@ -114,3 +112,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
